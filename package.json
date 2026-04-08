@@ -1,0 +1,8 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "dependencies": {
+    "three": "^0.175.0",
+    "@types/three": "^0.175.0"
+  }
+}
