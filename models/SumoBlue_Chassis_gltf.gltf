@@ -1,0 +1,162 @@
+{
+    "asset": {
+        "generator": "SOLIDWORKSGLTF",
+        "version": "2.0"
+    },
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Default",
+            "nodes": [
+                0,
+                1
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "matrix": [
+                0.9217510912720511,
+                -0.0741283828752312,
+                -0.38063093488454913,
+                0.0,
+                -0.004263770501161656,
+                0.9795621848297976,
+                -0.20109636076415416,
+                0.0,
+                0.38775861821485824,
+                0.18698371293718755,
+                0.9025964464234985,
+                0.0,
+                0.5106478546134119,
+                0.36974296501416315,
+                1.278610262411267,
+                1.0
+            ],
+            "camera": 0,
+            "name": "current camera"
+        },
+        {
+            "mesh": 0,
+            "name": "SumoBlue Chassis 3-24-26"
+        }
+    ],
+    "cameras": [
+        {
+            "type": "orthographic",
+            "orthographic": {
+                "xmag": 0.32131322528564293,
+                "ymag": 0.2482874922661786,
+                "zfar": 1.6822670289884583,
+                "znear": 1.1342494839454802
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 1,
+                        "NORMAL": 2
+                    },
+                    "indices": 0,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5125,
+            "count": 138873,
+            "type": "SCALAR",
+            "min": [
+                0
+            ],
+            "max": [
+                59806
+            ]
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 59807,
+            "type": "VEC3",
+            "min": [
+                -0.10000000149011612,
+                -1.3010426069826053e-17,
+                -3.469446951953614e-18
+            ],
+            "max": [
+                0.10000000149011612,
+                0.24699999392032623,
+                0.18000000715255737
+            ]
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 59807,
+            "type": "VEC3",
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "max": [
+                1.0,
+                1.0,
+                1.0
+            ]
+        }
+    ],
+    "materials": [
+        {
+            "name": "PlasticPolystyrene",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "metallicFactor": 0.0,
+                "roughnessFactor": 1.0
+            }
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 555492,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 555492,
+            "byteLength": 717684,
+            "byteStride": 12,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 1273176,
+            "byteLength": 717684,
+            "byteStride": 12,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "uri": "SumoBlue_Chassis_gltf.bin",
+            "byteLength": 1990860
+        }
+    ]
+}

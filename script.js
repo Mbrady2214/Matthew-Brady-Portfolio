@@ -186,6 +186,7 @@ function buildViewer(viewerRoot) {
     const status = viewerRoot.querySelector(".viewer-status");
     const modelPath = viewerRoot.dataset.model || "";
     const placeholderCopy = viewerRoot.dataset.placeholder || "Model viewer ready for a future CAD export.";
+    const modelTitle = viewerRoot.dataset.title || "Connected model";
 
     if (!canvasHost || !status || !window.THREE || !THREE.OrbitControls || !THREE.GLTFLoader) {
         status.textContent = "Status: 3D libraries are unavailable.";
@@ -215,6 +216,8 @@ function buildViewer(viewerRoot) {
     });
 
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     canvasHost.appendChild(renderer.domElement);
 
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -222,19 +225,40 @@ function buildViewer(viewerRoot) {
     controls.dampingFactor = 0.08;
     controls.target.set(0, 0, 0);
 
-    scene.add(new THREE.AmbientLight(0xffffff, 0.95));
+    scene.add(new THREE.AmbientLight(0xffffff, 0.7));
 
-    const keyLight = new THREE.DirectionalLight(0xffffff, 1.15);
+    const keyLight = new THREE.DirectionalLight(0xffffff, 1.35);
     keyLight.position.set(6, 7, 5);
+    keyLight.castShadow = true;
+    keyLight.shadow.mapSize.set(2048, 2048);
+    keyLight.shadow.bias = -0.0002;
+    keyLight.shadow.camera.near = 0.5;
+    keyLight.shadow.camera.far = 30;
+    keyLight.shadow.camera.left = -6;
+    keyLight.shadow.camera.right = 6;
+    keyLight.shadow.camera.top = 6;
+    keyLight.shadow.camera.bottom = -6;
     scene.add(keyLight);
 
-    const fillLight = new THREE.DirectionalLight(0x9ac7ff, 0.55);
+    const fillLight = new THREE.DirectionalLight(0x9ac7ff, 0.5);
     fillLight.position.set(-4, 3, -6);
     scene.add(fillLight);
 
-    const rimLight = new THREE.DirectionalLight(0x8ef7d0, 0.3);
+    const rimLight = new THREE.DirectionalLight(0x8ef7d0, 0.4);
     rimLight.position.set(0, 6, -6);
     scene.add(rimLight);
+
+    const floor = new THREE.Mesh(
+        new THREE.PlaneGeometry(16, 16),
+        new THREE.ShadowMaterial({
+            color: 0x000000,
+            opacity: 0.24
+        })
+    );
+    floor.rotation.x = -Math.PI / 2;
+    floor.position.y = -1.2;
+    floor.receiveShadow = true;
+    scene.add(floor);
 
     const gridHelper = new THREE.GridHelper(8, 8, 0x4478c4, 0x244160);
     gridHelper.visible = false;
@@ -268,14 +292,44 @@ function buildViewer(viewerRoot) {
 
         const framedBox = new THREE.Box3().setFromObject(object);
         const framedSize = framedBox.getSize(new THREE.Vector3());
+        const framedCenter = framedBox.getCenter(new THREE.Vector3());
+        const minY = framedBox.min.y;
         const distance = Math.max(framedSize.x, framedSize.y, framedSize.z) * 2.3;
 
+        object.position.y -= minY;
+        floor.position.y = framedCenter.y - framedSize.y / 2 - 0.02;
+
         camera.position.set(distance, distance * 0.66, distance);
-        controls.target.set(0, 0, 0);
+        controls.target.set(0, framedSize.y * 0.28, 0);
         controls.update();
 
         initialCameraPosition = camera.position.clone();
         initialTarget = controls.target.clone();
+    };
+
+    const stylizeModel = (root) => {
+        root.traverse((child) => {
+            if (!child.isMesh) {
+                return;
+            }
+
+            const sourceMaterial = Array.isArray(child.material) ? child.material[0] : child.material;
+            const grayMaterial = new THREE.MeshStandardMaterial({
+                color: 0xb8bec7,
+                metalness: 0.18,
+                roughness: 0.72,
+                envMapIntensity: 0.75,
+                flatShading: false
+            });
+
+            if (sourceMaterial?.map) {
+                grayMaterial.map = sourceMaterial.map;
+            }
+
+            child.material = grayMaterial;
+            child.castShadow = true;
+            child.receiveShadow = true;
+        });
     };
 
     const loading = createLoadingOverlay();
@@ -285,6 +339,7 @@ function buildViewer(viewerRoot) {
     loader.load(
         modelPath,
         (gltf) => {
+            stylizeModel(gltf.scene);
             scene.add(gltf.scene);
             frameObject(gltf.scene);
             loading.element.remove();
@@ -306,7 +361,12 @@ function buildViewer(viewerRoot) {
             console.error("Model load failed:", error);
             loading.element.remove();
             status.textContent = `Status: Failed to load ${modelPath}`;
-            placeholder.textContent = "The connected model could not be loaded. Confirm the file path and matching `.bin` assets are in the `models/` folder.";
+            placeholder.innerHTML = `
+                <div>
+                    <strong>${modelTitle} could not be loaded.</strong>
+                    <p>Confirm the file path is correct and that every export asset, including the matching <code>.bin</code> file, is present in <code>models/</code>.</p>
+                </div>
+            `;
         }
     );
 
