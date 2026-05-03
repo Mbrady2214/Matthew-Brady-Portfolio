@@ -214,6 +214,36 @@ textarea {
     position: relative;
 }
 
+.home-cover {
+    position: relative;
+    min-height: min(72vh, 760px);
+    margin-top: 28px;
+    padding: 34px 24px;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.05) 72%), url("images/Matthew Brady Tetons.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.home-cover-title {
+    margin: 0;
+    font-family: "Dancing Script", cursive;
+    font-size: clamp(3.4rem, 10vw, 8.2rem);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.01em;
+    color: #101010;
+    text-align: center;
+    text-wrap: balance;
+    width: 100%;
+}
+
 .hero {
     display: grid;
     grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
@@ -233,7 +263,8 @@ textarea {
 }
 
 .hero h1,
-.section-heading h2 {
+.section-heading h2,
+.section-heading h1 {
     margin: 0;
     font-family: "Space Grotesk", sans-serif;
     line-height: 1.02;
@@ -436,14 +467,9 @@ textarea {
     animation-delay: -2s;
 }
 
-.card-bottom-left {
-    left: 1%;
-    bottom: 8%;
-}
-
 .card-bottom-right {
-    right: 1%;
-    bottom: 8%;
+    right: -2%;
+    bottom: 14%;
     animation-delay: -3s;
 }
 
@@ -456,6 +482,11 @@ textarea {
 .section-heading h2 {
     max-width: 14ch;
     font-size: clamp(2rem, 5vw, 3.8rem);
+}
+
+.section-heading h1 {
+    max-width: 14ch;
+    font-size: clamp(2.2rem, 6vw, 4rem);
 }
 
 .section-heading.compact h3 {
@@ -532,6 +563,116 @@ textarea {
     border: 1px solid rgba(169, 196, 224, 0.16);
     background: rgba(255, 255, 255, 0.04);
     transition: transform 180ms ease, border-color 180ms ease, opacity 500ms ease, translate 500ms ease;
+}
+
+.page-hero {
+    min-height: auto;
+}
+
+.timeline-intro {
+    margin: 0 0 24px;
+    max-width: 72ch;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+.timeline-flow {
+    position: relative;
+    display: grid;
+    gap: 20px;
+    padding-left: 54px;
+}
+
+.timeline-flow::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 8px;
+    bottom: 24px;
+    width: 2px;
+    background: linear-gradient(180deg, rgba(122, 230, 176, 0.8), rgba(104, 180, 255, 0.28));
+}
+
+.timeline-flow::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    bottom: 4px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 12px solid var(--accent);
+}
+
+.timeline-entry {
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -41px;
+    top: 22px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    background: #08111d;
+    box-shadow: 0 0 0 5px rgba(104, 180, 255, 0.14);
+}
+
+.timeline-entry.is-current .timeline-marker {
+    border-color: var(--success);
+    box-shadow: 0 0 0 5px rgba(122, 230, 176, 0.2);
+}
+
+.timeline-entry-card {
+    padding: 22px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(169, 196, 224, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.timeline-entry-card h3 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.timeline-date {
+    margin: 0 0 10px;
+    color: var(--success);
+    font-size: 0.85rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.project-stack {
+    display: grid;
+    gap: 22px;
+}
+
+.project-case {
+    padding: 24px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(169, 196, 224, 0.2);
+    background: rgba(255, 255, 255, 0.04);
+    display: grid;
+    gap: 14px;
+}
+
+.project-case-header h2 {
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(1.35rem, 3vw, 1.9rem);
+}
+
+.project-files {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.project-case .viewer-shell {
+    margin-top: 6px;
 }
 
 .timeline-header,
@@ -688,6 +829,49 @@ textarea {
 
 .project-card {
     min-height: 220px;
+    display: grid;
+    align-content: start;
+    gap: 14px;
+}
+
+.project-description {
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid rgba(169, 196, 224, 0.2);
+    background: rgba(5, 12, 22, 0.45);
+    color: var(--muted);
+    line-height: 1.65;
+}
+
+.project-media {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(169, 196, 224, 0.2);
+    background: rgba(5, 12, 22, 0.65);
+}
+
+.project-media video {
+    display: block;
+    width: 100%;
+    max-height: 320px;
+}
+
+.project-media img {
+    display: block;
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+.project-media iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+.about-extra-grid {
+    margin-top: 20px;
 }
 
 .education-visual {
@@ -824,6 +1008,7 @@ textarea {
     }
 
     .section-heading h2,
+    .section-heading h1,
     .hero h1 {
         max-width: none;
     }
@@ -866,6 +1051,12 @@ textarea {
         border-radius: 24px;
     }
 
+    .home-cover {
+        min-height: 60vh;
+        padding-top: 24px;
+        border-radius: 24px;
+    }
+
     .portrait-orbit {
         width: 100%;
         aspect-ratio: auto;
@@ -904,6 +1095,11 @@ textarea {
         padding-top: 20px;
     }
 
+    .home-cover {
+        min-height: 52vh;
+        padding-top: 20px;
+    }
+
     .hero h1 {
         font-size: clamp(2.5rem, 14vw, 4rem);
     }
@@ -916,8 +1112,25 @@ textarea {
     .hero-actions,
     .resource-links,
     .contact-links,
+    .project-files,
     .viewer-toolbar {
         flex-direction: column;
+    }
+
+    .timeline-flow {
+        padding-left: 34px;
+    }
+
+    .timeline-marker {
+        left: -21px;
+    }
+
+    .timeline-flow::before {
+        left: 9px;
+    }
+
+    .timeline-flow::after {
+        left: 3px;
     }
 
     .skills-grid {

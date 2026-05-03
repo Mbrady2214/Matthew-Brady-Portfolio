@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matthew Brady | Mechanical Engineering Portfolio</title>
-    <meta name="description" content="Engineering portfolio for Matthew Brady featuring mechanical design work, experience, education, and 3D CAD showcases.">
+    <meta name="description" content="Mechanical engineering portfolio for Matthew Brady featuring education, experience, projects, and contact information.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="site-shell">
         <header class="site-header">
-            <a class="brand" href="#home">
+            <a class="brand" href="index.html">
                 <span class="brand-mark">MB</span>
                 <span class="brand-copy">
                     <strong>Matthew Brady</strong>
@@ -28,14 +28,10 @@
             </button>
 
             <nav id="site-nav" class="site-nav">
-                <a href="#home">Home</a>
                 <a href="#about">About</a>
-                <a href="#experience">Experience</a>
-                <a href="#capstone">Capstone</a>
-                <a href="#projects">Projects</a>
-                <a href="#education">Education</a>
-                <a href="#cad-showcase">3D CAD</a>
-                <a href="#contact">Contact</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="#connect">Connect</a>
             </nav>
 
             <div class="header-actions">
@@ -46,57 +42,8 @@
         </header>
 
         <main>
-            <section id="home" class="hero section">
-                <div class="hero-copy">
-                    <p class="eyebrow">Engineering Portfolio</p>
-                    <h1>Matthew Brady
-                        Mechanical Engineer
-                    </h1>
-                    <p class="hero-text">
-                        I'm Matthew Brady, a Mechanical Engineering student at Oregon State University with experience in transmission design,
-                        problem solving, and hands-on professional engineering work.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="button primary" href="#cad-showcase">Explore Projects</a>
-                        <a class="button secondary" href="PDF's/Matthew Brady Resume 1-1-2026.pdf" download="Matthew Brady Resume.pdf">Download Resume</a>
-                    </div>
-                    <div class="hero-metrics">
-                        <article>
-                            <strong>Mechanical Engineering</strong>
-                            <span>B.S. in progress at Oregon State University</span>
-                        </article>
-                        <article>
-                            <strong>Product Design Focus</strong>
-                            <span>Manufacturing, CAD, and applied engineering workflow</span>
-                        </article>
-                        <article>
-                            <strong>Industry Experience</strong>
-                            <span>Transmission Line Engineer Intern at WSP</span>
-                        </article>
-                    </div>
-                </div>
-
-                <div class="hero-portrait-panel">
-                    <div class="portrait-orbit">
-                        <article class="floating-card card-top-left">
-                            <span class="floating-label">Degree</span>
-                            <strong>B.S. Mechanical Engineering</strong>
-                            <p>Oregon State University, September 2022 to June 2026.
-                                Product Design + Manufacturing
-                            </p>
-                        </article>
-                        
-                        <article class="floating-card card-bottom-right">
-                            <span class="floating-label">Experience</span>
-                            <strong>WSP Internship</strong>
-                            <p>Transmission design revisions, concrete foundations, and documentation control.</p>
-                        </article>
-                        
-                        <div class="portrait-frame">
-                            <img src="images/Matthew.jpg" alt="Portrait of Matthew Brady">
-                        </div>
-                    </div>
-                </div>
+            <section id="home" class="home-cover">
+                <h1 class="home-cover-title">Matthew Brady</h1>
             </section>
 
             <section id="about" class="section story-section">
@@ -105,285 +52,79 @@
                     <h2>About Me</h2>
                 </div>
                 <div class="story-grid">
-                    <article class="story-card">
+                    <article class="story-card reveal">
                         <h3>Professional Summary</h3>
                         <p>
-                            Hello! My name is Matthew Brady, I am a student at Oregon State University pursuing my bachelors of science in Mechanical
-Engineering. I currently work for WSP as an Intern Transmission line Engineer part time as I finish my degree. I also run three
-leadership positions as president of the OSU baseball club and treasurer of the international medicine club. I am looking for a
-full-time entry-level engineering position to gain more experience as a professional engineer. 
-                            
-                            
-                        
+                            Hello. My name is Matthew Brady, and I am a Mechanical Engineering student at Oregon State University. I currently work part-time at WSP as an Intern Transmission Line Engineer while finishing my degree. Outside of engineering, I love to travel, play baseball, and spend time outdoors.
                         </p>
                     </article>
-                    <article class="story-card">
+                    <article class="story-card reveal">
                         <h3>Core Strengths</h3>
                         <ul class="detail-list">
                             <li>Mechanical design with a strong CAD and fabrication mindset.</li>
                             <li>Analytical approach to structure, documentation, and revision control.</li>
-                            <li>Comfort moving between design tools, technical communication, and project execution.</li>
+                            <li>Comfort moving between technical tools, communication, and execution.</li>
                         </ul>
                     </article>
                 </div>
 
-                <div class="skills-panel">
-                    <div class="section-heading compact">
-                        <p class="eyebrow">Tools</p>
-                        <h3>Software and platforms I work with</h3>
-                    </div>
-                    <div class="skills-grid">
-                        <div class="skill-chip"><img src="images/solidworks.png" alt="SolidWorks logo"><span>SolidWorks</span></div>
-                        <div class="skill-chip"><img src="images/autocad.png" alt="AutoCAD logo"><span>AutoCAD</span></div>
-                        <div class="skill-chip"><img src="images/R_logo.png" alt="R logo"><span>R</span></div>
-                        <div class="skill-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python logo"><span>Python</span></div>
-                        <div class="skill-chip"><img src="images/reactjs_logo.png" alt="React logo"><span>React</span></div>
-                        <div class="skill-chip"><img src="images/Git_logo.png" alt="Git logo"><span>Git</span></div>
-                        <div class="skill-chip"><img src="images/pngwing.com.png" alt="Jira logo"><span>Fadd Tools/span></div>
-                        <div class="skill-chip"><img src="images/js.png" alt="JavaScript logo"><span>Project Wise</span></div>
-                        <div class="skill-chip"><img src="images/Confluence_Logo.png" alt="Confluence logo"><span>PLS</span></div>
-                        <div class="skill-chip"><img src="images/powerpoint.png" alt="PowerPoint logo"><span>PowerPoint</span></div>
-                        <div class="skill-chip"><img src="images/Excel-Logo.png" alt="Excel logo"><span>Excel</span></div>
-                        <div class="skill-chip"><img src="images/azure-logo-white-circle-1.png" alt="Azure logo"><span>BlueBeam</span></div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="experience" class="section">
-                <div class="section-heading">
-                    <p class="eyebrow">Experience</p>
-                    <h2>Relavant Experience</h2>
-                </div>
-                <article class="timeline-card reveal">
-                    <div class="timeline-header">
-                        <div>
-                            <p class="timeline-label">Industry Experience</p>
-                            <h3>Transmission Line Engineer Intern</h3>
-                            <p class="timeline-meta"><strong>WSP</strong> - Internship</p>
-                        </div>
-                        <div class="timeline-side">
-                            <p id="wsp-dates">Jun 2025 - Present</p>
-                            <p>Portland, Oregon, United States - On-site</p>
-                        </div>
-                    </div>
-                    <ul class="detail-list">
-                        <li>Revised new and existing transmission line designs using PLS-CADD.</li>
-                        <li>Designed direct-embed and drilled pier concrete foundations for steel poles up to 130 ft.</li>
-                        <li>Created markups and managed revisions using Bluebeam Revu.</li>
-                        <li>Tracked and maintained document versions using ProjectWise.</li>
-                    </ul>
-                </article>
-            </section>
-
-            <section id="capstone" class="section">
-                <div class="section-heading">
-                    <p class="eyebrow">Senior Capstone</p>
-                    <h2>SumoBlue! Sumo robot design. <picture>
-                        <source media="(min-width: )" srcset="">
-                        <img src="" alt="">
-                    </picture></h2>
-                </div>
-
-                <div class="capstone-layout">
-                    <article class="resource-card reveal">
-                        <h3>Application Materials</h3>
-                        <p>Professional documents already included in this portfolio.</p>
-                        <div class="resource-links">
-                            <a class="button tertiary" href="PDF's/Matthew Brady Resume 1-1-2026.pdf" target="_blank" rel="noreferrer">Matthew Brady Resume</a>
-                            <a class="button tertiary" href="PDF's/Indvidual Assignment Cover Letter.pdf" target="_blank" rel="noreferrer">Cover Letter</a>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal">
-                        <h3>Team Based Project</h3>
+                <div class="story-grid about-extra-grid">
+                    <article class="story-card reveal">
+                        <h3>Travel and Life Outside Engineering</h3>
                         <p>
-                            A collection of team assignments worked through during our Senior capstone.                        </p>
-                        <div class="resource-links">
-                            <span class="button tertiary is-disabled">Final Team Report </span>
-                            <span class="button tertiary is-disabled">Team Charter </span>
-                        </div>
-                    </article>
-
-                    <article class="resource-card reveal">
-                        <h3>Individual Assignments</h3>
-                        <p>
-                            Individual writing works based around brainstorming of capstone design. 
+                            Exploring new places is one of my biggest passions, this photo is from a trip to Seoul, South Korea.
                         </p>
-                        <div class="resource-links">
-                            <span class="button tertiary is-disabled">Individual Design Proposal </span>
-                            <span class="button tertiary is-disabled">Self-learning Assignment </span>
-                            <span class="button tertiary is-disabled">Reflection Essay </span>
+                        <div class="project-media">
+                            <img src="images/Seoul Photo.jpeg" alt="Matthew Brady and friend exploring Seoul, South Korea">
                         </div>
                     </article>
-                </div>
 
-                <div class="viewer-grid capstone-viewers">
-                    <article class="viewer-card reveal">
-                        <div class="viewer-copy">
-                            <p class="eyebrow">Capstone 3D Chassis Model</p>
-                            <h3>Sumo Bot Chassis</h3>
-                            <p>
-                                This is the Chassis Model I design for our sumo bot. Used to store and manage all internal components while providing suport for all subassemblys. 
-                            </p>
-                            <ul class="detail-list">
-                                
-                            </ul>
-                        </div>
-                        <div
-                            class="viewer-shell"
-                            data-viewer
-                            data-model="models/SumoBlue_Chassis_gltf.gltf"
-                            data-title="Senior Capstone Sumo Bot Chassis"
-                            data-description="Interactive preview for the SumoBlue chassis model from senior capstone."
-                            data-placeholder="Loading the SumoBlue chassis export. Use the controls below to inspect the frame once the model finishes rendering."
-                        >
-                            <div class="viewer-canvas"></div>
-                            <div class="viewer-toolbar">
-                                <button type="button" class="control-btn" data-action="reset">Reset View</button>
-                                <button type="button" class="control-btn" data-action="grid">Grid</button>
-                                <button type="button" class="control-btn" data-action="axes">Axes</button>
-                            </div>
-                            <div class="viewer-meta">
-                                <h4>Senior Capstone Sumo Bot Chassis</h4>
-                                <p>Interactive chassis preview for the SumoBlue capstone robot assembly.</p>
-                                <p class="viewer-status">Status: Initializing viewer...</p>
-                            </div>
+                    <article class="story-card reveal">
+                        <h3>OSU Club Baseball Leadership</h3>
+                        <p>
+                            I have participated in Oregon State Club Baseball for the last four years. I served as an officer last year and as club president this year, helping lead team operations and culture.
+                        </p>
+                        <div class="project-media">
+                            <img src="images/OSU Club Baseball Team Photo.jpeg" alt="OSU Club Baseball team photo">
+                            <img src="images/Seniors OSU Club Baseball.jpeg" alt="OSU Club Baseball seniors photo">
                         </div>
                     </article>
                 </div>
             </section>
 
-            <section id="projects" class="section">
-                <div class="section-heading">
-                    <p class="eyebrow">Projects</p>
-                    <h2>Additional project space for future builds.</h2>
-                </div>
-                <div class="project-grid">
-                    <article class="project-card reveal">
-                        <span class="project-index">01</span>
-                        <h3>Project Placeholder 1</h3>
-                        <p>Reserve this slot for a manufacturing, design, or analysis project you want to highlight next.</p>
-                    </article>
-                    <article class="project-card reveal">
-                        <span class="project-index">02</span>
-                        <h3>Project Placeholder 2</h3>
-                        <p>This area can hold process notes, results, visuals, or links once the project is ready to publish.</p>
-                    </article>
-                    <article class="project-card reveal">
-                        <span class="project-index">03</span>
-                        <h3>Project Placeholder 3</h3>
-                        <p>Designed to give you room to expand the portfolio without reshaping the rest of the site later.</p>
-                    </article>
-                </div>
-            </section>
-
-            <section id="education" class="section">
+            <section class="section">
                 <div class="section-heading">
                     <p class="eyebrow">Education</p>
-                    <h2>Current degree path and technical direction.</h2>
+                    <h2>Current Degree Path</h2>
                 </div>
-                <div class="education-card reveal">
+                <article class="education-card reveal">
                     <div class="education-copy">
                         <h3>Oregon State University</h3>
                         <p><strong>September 2022 - June 2026</strong></p>
                         <p><strong>Degree:</strong> B.S. Mechanical Engineering</p>
-                        <p><strong>Major focus:</strong> Product Design and Manufacturing</p>
+                        <p><strong>Major Focus:</strong> Product Design and Manufacturing</p>
                     </div>
                     <div class="education-visual">
-                        <img src="" alt="Oregon State themed image">
+                        <img src="images/Matthew.jpg" alt="Portrait of Matthew Brady">
                     </div>
-                </div>
+                </article>
             </section>
 
-            <section id="cad-showcase" class="section cad-section">
+            <section id="connect" class="section contact-section">
                 <div class="section-heading">
-                    <p class="eyebrow">3D CAD Showcase</p>
-                    <h2>Interactive spaces for SolidWorks assemblies and future model demos.</h2>
-                </div>
-                <div class="viewer-grid">
-                    <article class="viewer-card reveal">
-                        <div class="viewer-copy">
-                            <p class="eyebrow">Live Viewer</p>
-                            <h3>SolidWorks Assembly Demonstration</h3>
-                            <p>
-                                This viewer is already connected to your current `EGR 248 Midterm` export. It can be repurposed for any mechanical
-                                assembly you want to showcase.
-                            </p>
-                        </div>
-                        <div
-                            class="viewer-shell"
-                            data-viewer
-                            data-model="models/EGR%20248%20Midterm.gltf"
-                            data-title="EGR 248 Midterm Project"
-                            data-description="Interactive 3D view for your current CAD export. Drag to orbit, scroll to zoom, and use the controls to inspect the model."
-                            data-placeholder="This viewer will load when a valid `.gltf` file is connected."
-                        >
-                            <div class="viewer-canvas"></div>
-                            <div class="viewer-toolbar">
-                                <button type="button" class="control-btn" data-action="reset">Reset View</button>
-                                <button type="button" class="control-btn" data-action="grid">Grid</button>
-                                <button type="button" class="control-btn" data-action="axes">Axes</button>
-                            </div>
-                            <div class="viewer-meta">
-                                <h4>EGR 248 Midterm Project</h4>
-                                <p>Use mouse drag to rotate, scroll to zoom, and right-click drag to pan.</p>
-                                <p class="viewer-status">Status: Initializing viewer...</p>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="viewer-card reveal">
-                        <div class="viewer-copy">
-                            <p class="eyebrow">Expandable Slot</p>
-                            <h3>Future CAD Project Viewer</h3>
-                            <p>
-                                I left this second showcase area open so you can add another SolidWorks assembly or another CAD build without
-                                redesigning the site again later.
-                            </p>
-                            <ul class="detail-list">
-                                <li>Good fit for another assembly, fixture, or mechanical concept.</li>
-                                <li>Uses the same viewer controls and styling as the main showcase.</li>
-                                <li>Ready for a new `.gltf` path whenever your next model is exported.</li>
-                            </ul>
-                        </div>
-                        <div
-                            class="viewer-shell"
-                            data-viewer
-                            data-model=""
-                            data-title="Future CAD Project"
-                            data-description="Open slot for another assembly or mechanical design export."
-                            data-placeholder="Future CAD slot ready. Add another `.gltf` export here for the next showcase."
-                        >
-                            <div class="viewer-canvas"></div>
-                            <div class="viewer-toolbar">
-                                <button type="button" class="control-btn" data-action="reset">Reset View</button>
-                                <button type="button" class="control-btn" data-action="grid">Grid</button>
-                                <button type="button" class="control-btn" data-action="axes">Axes</button>
-                            </div>
-                            <div class="viewer-meta">
-                                <h4>Future CAD Project</h4>
-                                <p>Reserved for another SolidWorks assembly or CAD demonstration.</p>
-                                <p class="viewer-status">Status: Awaiting model upload.</p>
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section id="contact" class="section contact-section">
-                <div class="section-heading">
-                    <p class="eyebrow">Contact</p>
-                    <h2>Let's connect.</h2>
+                    <p class="eyebrow">Connect</p>
+                    <h2>Contact Me</h2>
                 </div>
                 <div class="contact-layout">
                     <article class="contact-card reveal">
-                        <h3>Reach Out</h3>
+                        <h3>Direct Links</h3>
                         <p>
-                            Have a question or want to work together? Leave your details and I'll get back to you as soon as possible.
+                            I am available for internships and entry-level engineering opportunities. Reach out through the form or direct links below.
                         </p>
                         <div class="contact-links">
-                            <a href="https://github.com/matthewbrady2214/Matthew-Brady" target="_blank" rel="noreferrer">GitHub</a>
+                            <a href="mailto:matthewbrady2214@gmail.com">matthewbrady2214@gmail.com</a>
                             <a href="https://www.linkedin.com/in/matthew-brady-270712345" target="_blank" rel="noreferrer">LinkedIn</a>
+                            <a href="https://github.com/matthewbrady2214/Matthew-Brady" target="_blank" rel="noreferrer">GitHub</a>
                             <a href="PDF's/Matthew Brady Resume 1-1-2026.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
                         </div>
                     </article>
@@ -399,7 +140,7 @@ full-time entry-level engineering position to gain more experience as a professi
                         </label>
                         <label>
                             <span>Message</span>
-                            <textarea id="message" name="message" rows="6" placeholder="Tell me a little about what you're reaching out for." required></textarea>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell me a little about your opportunity or question." required></textarea>
                         </label>
                         <button type="submit" class="button primary submit-btn">Send Message</button>
                         <p id="form-status" class="form-status" aria-live="polite"></p>
@@ -409,9 +150,6 @@ full-time entry-level engineering position to gain more experience as a professi
         </main>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

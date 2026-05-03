@@ -10,7 +10,11 @@ function initNavigation() {
     const header = document.querySelector(".site-header");
     const toggle = document.querySelector(".nav-toggle");
     const navLinks = [...document.querySelectorAll(".site-nav a")];
-    const sections = navLinks
+    const sectionLinks = navLinks.filter((link) => {
+        const href = link.getAttribute("href") || "";
+        return href.startsWith("#");
+    });
+    const sections = sectionLinks
         .map((link) => document.querySelector(link.getAttribute("href")))
         .filter(Boolean);
 
@@ -24,6 +28,25 @@ function initNavigation() {
             header.classList.remove("is-open");
             toggle?.setAttribute("aria-expanded", "false");
         });
+    });
+
+    const normalizePath = (value) => decodeURIComponent(value.split(/[?#]/)[0]).toLowerCase();
+    const currentPath = normalizePath(window.location.pathname || "/");
+    const currentFile = currentPath.split("/").pop() || "";
+
+    navLinks.forEach((link) => {
+        const href = link.getAttribute("href") || "";
+
+        if (href.startsWith("#")) {
+            return;
+        }
+
+        const hrefPath = normalizePath(href);
+        const hrefFile = hrefPath.split("/").pop() || "";
+        const isHome = (hrefFile === "index.html" || hrefFile === "index 2.0.html") && (currentFile === "" || currentFile === "index.html" || currentFile === "index 2.0.html");
+        const isMatch = isHome || hrefFile === currentFile;
+
+        link.classList.toggle("is-active", isMatch);
     });
 
     if (!sections.length) {
