@@ -43,10 +43,10 @@ const travelData = {
             city: "Cancun",
             country: "Mexico",
             coordinates: [21.1619, -86.8515],
-            thumbnailPhoto: "images/Cancun 1.jpeg",
+            thumbnailPhoto: "images 1/Cancun 1.jpeg",
             tripPhotos: [
-                "images/Cancun 1.jpeg",
-                "images/Cancun 2.jpeg"
+                "images 1/Cancun 1.jpeg",
+                "images 1/Cancun 2.jpeg"
             ]
         },
         {
@@ -54,10 +54,10 @@ const travelData = {
             city: "Belize City",
             country: "Belize",
             coordinates: [17.251, -88.759],
-            thumbnailPhoto: "images/Belize 1.jpg",
+            thumbnailPhoto: "images 1/Belize 1.jpg",
             tripPhotos: [
-                "images/Belize 1.jpg",
-                "images/Belize 2.jpg"
+                "images 1/Belize 1.jpg",
+                "images 1/Belize 2.jpg"
             ]
         },
         {
@@ -65,11 +65,11 @@ const travelData = {
             city: "Seoul",
             country: "South Korea",
             coordinates: [37.5665, 126.978],
-            thumbnailPhoto: "images/Seoul 1.jpeg",
+            thumbnailPhoto: "images two/Seoul 1.jpeg",
             tripPhotos: [
-                "images/Seoul 1.jpeg",
-                "images/Seoul 2.jpeg",
-                "images/Seoul 3.jpeg"
+                "images two/Seoul 1.jpeg",
+                "images 1/Seoul 2.jpeg",
+                "images two/Seoul 3.jpeg"
             ]
         },
         {
@@ -77,10 +77,10 @@ const travelData = {
             city: "Tokyo",
             country: "Japan",
             coordinates: [35.6762, 139.6503],
-            thumbnailPhoto: "images/Tokyo 1.jpeg",
+            thumbnailPhoto: "images 1/Tokyo 1.jpeg",
             tripPhotos: [
-                "images/Tokyo 1.jpeg",
-                "images/Tokyo 2.jpeg"
+                "images 1/Tokyo 1.jpeg",
+                "images two/Tokyo 2.jpeg"
             ]
         },
         {
@@ -88,10 +88,10 @@ const travelData = {
             city: "Kyoto",
             country: "Japan",
             coordinates: [35.0116, 135.7681],
-            thumbnailPhoto: "images/Kyoto 1.jpeg",
+            thumbnailPhoto: "images two/Kyoto 1.jpeg",
             tripPhotos: [
-                "images/Kyoto 1.jpeg",
-                "images/Kyoto 2.jpeg"
+                "images two/Kyoto 1.jpeg",
+                "images two/Kyoto 2.jpeg"
             ]
         },
         {
@@ -99,10 +99,10 @@ const travelData = {
             city: "Tam Coc",
             country: "Vietnam",
             coordinates: [20.2281, 105.9438],
-            thumbnailPhoto: "images/Tam coc 1.jpeg",
+            thumbnailPhoto: "images 1/Tam coc 1.jpeg",
             tripPhotos: [
-                "images/Tam coc 1.jpeg",
-                "images/Tam coc 2.jpeg"
+                "images 1/Tam coc 1.jpeg",
+                "images two/Tam coc 2.jpeg"
             ]
         },
         {
@@ -110,9 +110,9 @@ const travelData = {
             city: "Ho Chi Minh City",
             country: "Vietnam",
             coordinates: [10.8231, 106.6297],
-            thumbnailPhoto: "images/Ho Chi Minh.jpeg",
+            thumbnailPhoto: "images two/Ho Chi Minh.jpeg",
             tripPhotos: [
-                "images/Ho Chi Minh.jpeg"
+                "images two/Ho Chi Minh.jpeg"
             ]
         },
         {
@@ -120,10 +120,10 @@ const travelData = {
             city: "Wrangell, Alaska",
             country: "United States",
             coordinates: [56.4716, -132.3768],
-            thumbnailPhoto: "images/Wrangell Ak 1.jpeg",
+            thumbnailPhoto: "images 1/Wrangell Ak 1.jpeg",
             tripPhotos: [
-                "images/Wrangell Ak 1.jpeg",
-                "images/Wrangell Ak 2.jpeg"
+                "images 1/Wrangell Ak 1.jpeg",
+                "images 1/Wrangell Ak 2.jpeg"
             ]
         }
     ]

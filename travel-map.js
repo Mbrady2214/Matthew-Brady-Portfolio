@@ -86,7 +86,7 @@
             image.alt = `${location.city} trip photo ${photoIndex + 1}`;
             image.loading = "lazy";
             image.addEventListener("error", () => {
-                image.src = "images/profile-picture.png";
+                image.src = "images two/profile-picture.png";
             });
             drawerGallery.appendChild(image);
         });
@@ -247,7 +247,7 @@
             thumbImage.alt = `${location.city} thumbnail photo`;
             thumbImage.loading = "lazy";
             thumbImage.addEventListener("error", () => {
-                thumbImage.src = "images/profile-picture.png";
+                thumbImage.src = "images two/profile-picture.png";
             });
             thumbWrap.appendChild(thumbImage);
 

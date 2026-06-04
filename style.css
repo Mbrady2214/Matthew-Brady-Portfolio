@@ -206,35 +206,35 @@ textarea {
 
 .page-cover-home {
     min-height: 94vh;
-    --page-cover-image: url("images/Matthew Brady Tetons.jpg");
+    --page-cover-image: url("images two/Matthew Brady Tetons.jpg");
 }
 
 .page-cover-experience {
-    --page-cover-image: url("images/Expirience Headpage.png");
+    --page-cover-image: url("images two/Expirience Headpage.png");
 }
 
 .page-cover-projects {
-    --page-cover-image: url("images/Projects headpage.jpg");
+    --page-cover-image: url("images 1/Projects headpage.jpg");
 }
 
 .page-cover-contact {
-    --page-cover-image: url("images/Contact headpage.jpg");
+    --page-cover-image: url("images 1/Contact headpage.jpg");
 }
 
 .page-cover-sumoblue {
-    --page-cover-image: url("images/SumoBlue Assembly.png");
+    --page-cover-image: url("images 1/SumoBlue Assembly.png");
 }
 
 .page-cover-me414 {
-    --page-cover-image: url("images/MFGE 414 Final.png");
+    --page-cover-image: url("images 1/MFGE 414 Final.png");
 }
 
 .page-cover-arduino {
-    --page-cover-image: url("images/Arduino Uno.jpg");
+    --page-cover-image: url("images two/Arduino Uno.jpg");
 }
 
 .page-cover-misc {
-    --page-cover-image: url("images/mechanical-design.png");
+    --page-cover-image: url("images two/mechanical-design.png");
 }
 
 .page-cover-copy {
