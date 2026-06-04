@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     initRevealAnimations();
     initWspDates();
     initContactForm();
+    initJourneyTimelines();
     initViewers();
 });
 
 function initNavigation() {
-    const header = document.querySelector(".site-header");
-    const toggle = document.querySelector(".nav-toggle");
     const navLinks = [...document.querySelectorAll(".site-nav a")];
     const sectionLinks = navLinks.filter((link) => {
         const href = link.getAttribute("href") || "";
@@ -18,21 +17,10 @@ function initNavigation() {
         .map((link) => document.querySelector(link.getAttribute("href")))
         .filter(Boolean);
 
-    toggle?.addEventListener("click", () => {
-        const isOpen = header.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(isOpen));
-    });
-
-    navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            header.classList.remove("is-open");
-            toggle?.setAttribute("aria-expanded", "false");
-        });
-    });
-
     const normalizePath = (value) => decodeURIComponent(value.split(/[?#]/)[0]).toLowerCase();
     const currentPath = normalizePath(window.location.pathname || "/");
     const currentFile = currentPath.split("/").pop() || "";
+    const isProjectDetailPage = currentFile.startsWith("project-");
 
     navLinks.forEach((link) => {
         const href = link.getAttribute("href") || "";
@@ -44,7 +32,8 @@ function initNavigation() {
         const hrefPath = normalizePath(href);
         const hrefFile = hrefPath.split("/").pop() || "";
         const isHome = (hrefFile === "index.html" || hrefFile === "index 2.0.html") && (currentFile === "" || currentFile === "index.html" || currentFile === "index 2.0.html");
-        const isMatch = isHome || hrefFile === currentFile;
+        const isProjectsAnchor = hrefFile === "projects.html" && isProjectDetailPage;
+        const isMatch = isHome || isProjectsAnchor || hrefFile === currentFile;
 
         link.classList.toggle("is-active", isMatch);
     });
@@ -101,10 +90,67 @@ function initRevealAnimations() {
     revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-function initWspDates() {
-    const wspDates = document.getElementById("wsp-dates");
+function initJourneyTimelines() {
+    const journeyRoots = document.querySelectorAll("[data-journey]");
 
-    if (!wspDates) {
+    if (!journeyRoots.length) {
+        return;
+    }
+
+    journeyRoots.forEach((root) => {
+        const slides = [...root.querySelectorAll("[data-journey-slide]")];
+        const nodes = [...root.querySelectorAll("[data-journey-jump]")];
+        const prevButton = root.querySelector("[data-journey-dir='prev']");
+        const nextButton = root.querySelector("[data-journey-dir='next']");
+
+        if (!slides.length) {
+            return;
+        }
+
+        let index = slides.findIndex((slide) => slide.classList.contains("is-active"));
+        if (index < 0) {
+            index = 0;
+        }
+
+        const setActive = (nextIndex) => {
+            index = (nextIndex + slides.length) % slides.length;
+
+            slides.forEach((slide, slideIndex) => {
+                slide.classList.toggle("is-active", slideIndex === index);
+            });
+
+            nodes.forEach((node, nodeIndex) => {
+                const isActive = nodeIndex === index;
+                node.classList.toggle("is-active", isActive);
+                node.setAttribute("aria-selected", String(isActive));
+            });
+        };
+
+        prevButton?.addEventListener("click", () => setActive(index - 1));
+        nextButton?.addEventListener("click", () => setActive(index + 1));
+
+        nodes.forEach((node, nodeIndex) => {
+            node.addEventListener("click", () => setActive(nodeIndex));
+        });
+
+        root.addEventListener("keydown", (event) => {
+            if (event.key === "ArrowLeft") {
+                setActive(index - 1);
+            }
+
+            if (event.key === "ArrowRight") {
+                setActive(index + 1);
+            }
+        });
+
+        setActive(index);
+    });
+}
+
+function initWspDates() {
+    const wspDates = [...document.querySelectorAll("#wsp-dates, #wsp-dates-home")];
+
+    if (!wspDates.length) {
         return;
     }
 
@@ -126,7 +172,9 @@ function initWspDates() {
             }
         }
 
-        wspDates.textContent = `Jun 2025 - Present - ${duration}`;
+        wspDates.forEach((dateNode) => {
+            dateNode.textContent = `Jun 2025 - Present - ${duration}`;
+        });
     };
 
     update();

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,8 @@
     <meta name="description" content="Mechanical engineering portfolio for Matthew Brady featuring education, experience, projects, and contact information.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -21,135 +22,181 @@
                 </span>
             </a>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
             <nav id="site-nav" class="site-nav">
-                <a href="#about">About</a>
+                <a href="index.html">About Me</a>
                 <a href="experience.html">Experience</a>
                 <a href="projects.html">Projects</a>
-                <a href="#connect">Connect</a>
+                <a href="contact.html">Contact Me</a>
+                
             </nav>
-
-            <div class="header-actions">
-                <a href="https://github.com/matthewbrady2214/Matthew-Brady" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/matthew-brady-270712345" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a class="button ghost" href="PDF's/Matthew Brady Resume 1-1-2026.pdf" download="Matthew Brady Resume.pdf">Resume</a>
-            </div>
         </header>
 
         <main>
-            <section id="home" class="home-cover">
-                <h1 class="home-cover-title">Matthew Brady</h1>
+            <section id="home" class="page-cover page-cover-home">
+                <div class="page-cover-copy">
+                    <h1 class="home-cover-title">Matthew Brady</h1>
+                    <p class="home-cover-subtitle">Mechanical Engineering Portfolio</p>
+                </div>
             </section>
 
-            <section id="about" class="section story-section">
+            <section id="about" class="section about-page-section">
                 <div class="section-heading">
                     <p class="eyebrow">About</p>
-                    <h2>About Me</h2>
-                </div>
-                <div class="story-grid">
-                    <article class="story-card reveal">
-                        <h3>Professional Summary</h3>
-                        <p>
-                            Hello. My name is Matthew Brady, and I am a Mechanical Engineering student at Oregon State University. I currently work part-time at WSP as an Intern Transmission Line Engineer while finishing my degree. Outside of engineering, I love to travel, play baseball, and spend time outdoors.
-                        </p>
-                    </article>
-                    <article class="story-card reveal">
-                        <h3>Core Strengths</h3>
-                        <ul class="detail-list">
-                            <li>Mechanical design with a strong CAD and fabrication mindset.</li>
-                            <li>Analytical approach to structure, documentation, and revision control.</li>
-                            <li>Comfort moving between technical tools, communication, and execution.</li>
-                        </ul>
-                    </article>
+                    <h2></h2>
                 </div>
 
-                <div class="story-grid about-extra-grid">
-                    <article class="story-card reveal">
-                        <h3>Travel and Life Outside Engineering</h3>
-                        <p>
-                            Exploring new places is one of my biggest passions, this photo is from a trip to Seoul, South Korea.
+                <div class="about-layout">
+                    <div class="about-copy reveal">
+                        <p class="about-lead">
+                            I am a Mechanical Engineering student at Oregon State University focused on product design and manufacturing,
+                            currently working as a Transmission Line Engineer Intern at WSP.
                         </p>
-                        <div class="project-media">
-                            <img src="images/Seoul Photo.jpeg" alt="Matthew Brady and friend exploring Seoul, South Korea">
-                        </div>
-                    </article>
-
-                    <article class="story-card reveal">
-                        <h3>OSU Club Baseball Leadership</h3>
                         <p>
-                            I have participated in Oregon State Club Baseball for the last four years. I served as an officer last year and as club president this year, helping lead team operations and culture.
+                    
                         </p>
-                        <div class="project-media">
-                            <img src="images/OSU Club Baseball Team Photo.jpeg" alt="OSU Club Baseball team photo">
-                            <img src="images/Seniors OSU Club Baseball.jpeg" alt="OSU Club Baseball seniors photo">
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="section">
-                <div class="section-heading">
-                    <p class="eyebrow">Education</p>
-                    <h2>Current Degree Path</h2>
-                </div>
-                <article class="education-card reveal">
-                    <div class="education-copy">
-                        <h3>Oregon State University</h3>
-                        <p><strong>September 2022 - June 2026</strong></p>
-                        <p><strong>Degree:</strong> B.S. Mechanical Engineering</p>
-                        <p><strong>Major Focus:</strong> Product Design and Manufacturing</p>
+                        <p>
+                            Outside of engineering I am passionate about travel and team leadership, both of which continue to shape how
+                            I approach projects and people.
+                        </p>
+                        <p class="about-inline-links">
+                            <a href="experience.html">Experience</a>
+                            <a href="projects.html">Explore Projects</a>
+                            <a href="contact.html">Contact Me</a>
+                            <a href="resume.html">View Resume</a>
+                        </p>
                     </div>
-                    <div class="education-visual">
+
+                    <figure class="about-portrait reveal">
                         <img src="images/Matthew.jpg" alt="Portrait of Matthew Brady">
-                    </div>
-                </article>
+                        <figcaption>Mechanical Engineering Student · Oregon State University</figcaption>
+                    </figure>
+                </div>
             </section>
 
-            <section id="connect" class="section contact-section">
+            <section id="travel-map-section" class="section travel-map-section">
                 <div class="section-heading">
-                    <p class="eyebrow">Connect</p>
-                    <h2>Contact Me</h2>
+                    <p class="eyebrow">Travel Map</p>
+                    <h2>Interactive Travel Map</h2>
                 </div>
-                <div class="contact-layout">
-                    <article class="contact-card reveal">
-                        <h3>Direct Links</h3>
-                        <p>
-                            I am available for internships and entry-level engineering opportunities. Reach out through the form or direct links below.
-                        </p>
-                        <div class="contact-links">
-                            <a href="mailto:matthewbrady2214@gmail.com">matthewbrady2214@gmail.com</a>
-                            <a href="https://www.linkedin.com/in/matthew-brady-270712345" target="_blank" rel="noreferrer">LinkedIn</a>
-                            <a href="https://github.com/matthewbrady2214/Matthew-Brady" target="_blank" rel="noreferrer">GitHub</a>
-                            <a href="PDF's/Matthew Brady Resume 1-1-2026.pdf" target="_blank" rel="noreferrer">Resume PDF</a>
-                        </div>
-                    </article>
+                <p class="timeline-intro">
+                    Drag, zoom, and click pins to explore my travel history. Pinned locations represent places I have visited.
+                </p>
 
-                    <form id="contact-form" class="contact-form reveal" action="https://formspree.io/f/xkgjvrla" method="POST">
-                        <label>
-                            <span>Name</span>
-                            <input type="text" id="name" name="name" placeholder="Your name" required>
-                        </label>
-                        <label>
-                            <span>Email</span>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                        </label>
-                        <label>
-                            <span>Message</span>
-                            <textarea id="message" name="message" rows="6" placeholder="Tell me a little about your opportunity or question." required></textarea>
-                        </label>
-                        <button type="submit" class="button primary submit-btn">Send Message</button>
-                        <p id="form-status" class="form-status" aria-live="polite"></p>
-                    </form>
+                <div class="travel-map-shell reveal">
+                    <div id="travel-map" class="travel-map-canvas" role="region" aria-label="Interactive world travel map"></div>
+
+                    <aside id="travel-drawer" class="travel-drawer" aria-live="polite" hidden>
+                        <button id="travel-drawer-close" class="travel-drawer-close" type="button" aria-label="Close travel details">&times;</button>
+                        <div id="travel-drawer-gallery" class="travel-drawer-gallery"></div>
+                    </aside>
+                </div>
+            </section>
+
+            <section class="section education-journey-section">
+                <div class="section-heading">
+                    <p class="eyebrow">Education Journey</p>
+                    <h2>Educational Timeline</h2>
+                </div>
+                <p class="timeline-intro">
+                    Use the arrows or click a timeline stop to move through each stage.
+                </p>
+
+                <div class="journey-shell reveal" data-journey tabindex="0">
+                    <button class="journey-arrow" type="button" data-journey-dir="prev" aria-label="Previous timeline section">&#8592;</button>
+
+                    <div class="journey-center">
+                        <div class="journey-rail" role="tablist" aria-label="Education timeline stops">
+                            <button class="journey-node is-active" type="button" data-journey-jump="0" role="tab" aria-selected="true">2018-2022 · Santiam Jr/Sr</button>
+                            <button class="journey-node" type="button" data-journey-jump="1" role="tab" aria-selected="false">2022-2026 · Oregon State</button>
+                            <button class="journey-node" type="button" data-journey-jump="2" role="tab" aria-selected="false">2023-2024 · Yonsei Abroad</button>
+                        </div>
+
+                        <div class="journey-slides">
+                            <article class="journey-slide is-active" data-journey-slide>
+                                <div class="journey-slide-meta">
+                                    <p class="timeline-date">September 2018 - June 2022</p>
+                                    <h3>Santiam Jr/Sr High School</h3>
+                                    <p>Diploma · Student Athlete · Auto Shop </p>
+                                </div>
+                                <div class="journey-slide-layout">
+                                    <div class="journey-slide-copy">
+                                        <p>
+                                            
+                                        </p>
+                                        <ul class="detail-list">
+                                            <li>Linn County Junior First Citizen 2022</li>
+                                            <li>Worked as autoshop assistant to renovate vehicles to maximize resale value.</li>
+                                            <li>Graduated Validvictorian in June 2022.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="journey-slide-media two-up">
+                                        <img src="images/Matthew Highschool.JPG" alt="Matthew Brady at Santiam Jr/Sr High School">
+                                        <img src="images/Matthew Highschool 2.PNG" alt="Additional high school photo from Santiam Jr/Sr">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="journey-slide" data-journey-slide>
+                                <div class="journey-slide-meta">
+                                    <p class="timeline-date">September 2022 - June 2026</p>
+                                    <h3>Oregon State University</h3>
+                                    <p>B.S. Mechanical Engineering · Focus in Product Design and Manufacturing</p>
+                                </div>
+                                <div class="journey-slide-layout">
+                                    <div class="journey-slide-copy">
+                                        <p>
+                                           
+                                        </p>
+                                        <ul class="detail-list">
+                                            <li>Club Baseball President with leadership in team operations and culture.</li>
+                                            <li>International Medicine Club Treasurer with budget and organization responsibilities.</li>
+                                            <li>Core degree focus: product design and manufacturing systems.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="journey-slide-media two-up">
+                                        <img src="images/OSU Club Baseball Team Photo.jpeg" alt="OSU Club Baseball team photo">
+                                        <img src="images/IMG_1470.JPG" alt="OSU Club Baseball seniors photo">
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="journey-slide" data-journey-slide>
+                                <div class="journey-slide-meta">
+                                    <p class="timeline-date">August 2023 - December 2024</p>
+                                    <h3>Yonsei University · Study Abroad in South Korea</h3>
+                                    <p>International Studies · Yonsei Eagles Baseball Club · Yonsei American Football Club</p>
+                                </div>
+                                <div class="journey-slide-layout">
+                                    <div class="journey-slide-copy">
+                                        <p>
+                                            This chapter added global perspective, cultural adaptability, and new team experiences while
+                                            studying abroad at Yonsei University.
+                                        </p>
+                                        <ul class="detail-list">
+                                            
+                                            <li>Yonsei Eagles Baseball Club Member.</li>
+                                            <li>Participated in Yonsei American Football Club Member.</li>
+                                        </ul>
+                                    </div>
+                                    <div class="journey-slide-media two-up">
+                                        <img src="images/Yonsei baseball Pitching.jpg" alt="Yonsei Eagles Baseball Club photo">
+                                        <img src="images/Yonsei Baseball Team.jpg" alt="Yonsei American Football Club photo">
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <button class="journey-arrow" type="button" data-journey-dir="next" aria-label="Next timeline section">&#8594;</button>
                 </div>
             </section>
         </main>
     </div>
 
+    <script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+    <script src="travelData.js"></script>
+    <script src="travel-map.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+

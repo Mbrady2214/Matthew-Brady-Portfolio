@@ -21,163 +21,77 @@
                 </span>
             </a>
 
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
             <nav id="site-nav" class="site-nav">
-                <a href="index.html#about">About</a>
+                <a href="index.html">About Me</a>
                 <a href="experience.html">Experience</a>
                 <a href="projects.html">Projects</a>
-                <a href="index.html#connect">Connect</a>
+                <a href="contact.html">Contact Me</a>
             </nav>
-
-            <div class="header-actions">
-                <a href="https://github.com/matthewbrady2214/Matthew-Brady" target="_blank" rel="noreferrer">GitHub</a>
-                <a href="https://www.linkedin.com/in/matthew-brady-270712345" target="_blank" rel="noreferrer">LinkedIn</a>
-                <a class="button ghost" href="PDF's/Matthew Brady Resume 1-1-2026.pdf" download="Matthew Brady Resume.pdf">Resume</a>
-            </div>
         </header>
 
         <main>
+            <section class="page-cover page-cover-projects">
+                <div class="page-cover-copy">
+                    <h1 class="page-cover-title">Projects</h1>
+                    <p class="page-cover-subtitle">Engineering Work Gallery</p>
+                </div>
+            </section>
+
             <section class="section">
                 <div class="section-heading">
                     <p class="eyebrow">Projects</p>
-                    <h1>Project Case Studies</h1>
+                    <h1>Project Gallery</h1>
                 </div>
                 <p class="timeline-intro">
-                    Each project keeps objective, process, outcomes, files, and media together in one place.
+                    Click each card to open the full project page. Placeholder cards are included for upcoming project uploads.
                 </p>
+                <div class="project-filter-bar">
+                    <span class="filter-chip">All</span>
+                    <span class="filter-chip">School</span>
+                    <span class="filter-chip">Personal</span>
+                    <span class="filter-chip">Team</span>
+                </div>
 
-                <div class="project-stack">
-                    <article class="project-case reveal">
-                        <div class="project-case-header">
-                            <span class="project-index">01</span>
-                            <h2>Senior Capstone: SumoBlue</h2>
-                        </div>
-                        <div class="project-description">
-                            Team-based capstone focused on a sumo robot build, including documentation, design justification,
-                            and a full chassis model.
-                        </div>
-                        <div class="project-files">
-                            <a class="button tertiary" href="PDF's/Matthew Brady Resume 1-1-2026.pdf" target="_blank" rel="noreferrer">Application Resume</a>
-                            <a class="button tertiary" href="PDF's/Matthew Brady Ping Cover Letter.pdf" target="_blank" rel="noreferrer">Application Cover Letter</a>
-                            <a class="button tertiary" href="PDF's/498 Final Report Draft SUMOBLUE.pdf" target="_blank" rel="noreferrer">Final Team Report</a>
-                            <a class="button tertiary" href="PDF's/SUMOBLUE Team Charter.pdf" target="_blank" rel="noreferrer">Team Charter</a>
-                            <a class="button tertiary" href="PDF's/WIC_Design_Proposal (2).pdf" target="_blank" rel="noreferrer">Individual Design Proposal</a>
-                            <a class="button tertiary" href="PDF's/WIC_Self_Learning (1).pdf" target="_blank" rel="noreferrer">Self-learning Assignment</a>
-                            <a class="button tertiary" href="PDF's/Indvidual Assignment Cover Letter.pdf" target="_blank" rel="noreferrer">Reflection Essay</a>
-                        </div>
-                        <ul class="detail-list">
-                            <li><strong>Fabrication Contribution:</strong> I soldered a custom PCB for the SumoBot wiring integration.</li>
-                        </ul>
-                        <div class="project-media">
-                            <img src="images/PCB Soldering.jpeg" alt="Custom PCB soldering work for SumoBlue capstone robot">
-                        </div>
-                        <div
-                            class="viewer-shell"
-                            data-viewer
-                            data-model="models/SUMO_BLUE_CHASSIS_2.0.gltf"
-                            data-title="Senior Capstone Sumo Bot Chassis"
-                            data-description="Interactive preview for the SumoBlue chassis model from senior capstone."
-                            data-placeholder="Loading the SumoBlue chassis export. Use the controls below to inspect the frame once the model finishes rendering."
-                        >
-                            <div class="viewer-canvas"></div>
-                            <div class="viewer-toolbar">
-                                <button type="button" class="control-btn" data-action="reset">Reset View</button>
-                                <button type="button" class="control-btn" data-action="grid">Grid</button>
-                                <button type="button" class="control-btn" data-action="axes">Axes</button>
-                            </div>
-                            <div class="viewer-meta">
-                                <h4>Senior Capstone Sumo Bot Chassis</h4>
-                                <p>Interactive chassis preview for the SumoBlue capstone robot assembly.</p>
-                                <p class="viewer-status">Status: Initializing viewer...</p>
-                            </div>
-                        </div>
-                    </article>
+                <div class="project-gallery">
+                    <a class="project-tile reveal" href="project-sumoblue.html">
+                        <img src="images/SumoBlue Assembly.png" alt="Senior Capstone SumoBlue robot assembly">
+                        <span class="project-tile-overlay">
+                            <span class="project-tile-title">Senior Capstone: SumoBlue</span>
+                            <span class="project-tile-classification">School Project</span>
+                        </span>
+                    </a>
 
-                    <article class="project-case reveal">
-                        <div class="project-case-header">
-                            <span class="project-index">02</span>
-                            <h2>ME 414 Final</h2>
-                        </div>
-                        <div class="project-description">
-                            Homemade manufactured catch-all storage space for keys, wallets, and purses near the front door.
-                            The project combines woodworking, resin casting, and ABS vacuum forming into one build process.
-                        </div>
-                        <ul class="detail-list">
-                            <li><strong>Objective:</strong> Build a durable entryway organizer with a clean, functional layout.</li>
-                            <li><strong>Methods:</strong> Woodworking, resin casting, and ABS vacuum forming.</li>
-                            
-                        </ul>
-                        <div class="project-media">
-                            <iframe
-                                src="https://www.youtube.com/embed/dqU6wydCVRA"
-                                title="ME 414 Final Project Process Video"
-                                loading="lazy"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </article>
+                    <a class="project-tile reveal" href="project-me-414.html">
+                        <img src="images/MFGE 414 Final.png" alt="ME 414 final project cover image">
+                        <span class="project-tile-overlay">
+                            <span class="project-tile-title">ME 414 Final</span>
+                            <span class="project-tile-classification">School Project</span>
+                        </span>
+                    </a>
 
-                    <article class="project-case reveal">
-                        <div class="project-case-header">
-                            <span class="project-index">03</span>
-                            <h2>ME 351 Arduino Step Counter</h2>
-                        </div>
-                        <div class="project-description">
-                            Built an Arduino-based step counter using a MPU6050 sensor and interrupt driven code to detect and count movement while walking with the device.
-                        </div>
-                        <ul class="detail-list">
-                            <li><strong>Class:</strong> ME 351</li>
-                            
-                        </ul>
-                        <div class="project-media">
-                            <img src="images/Ardunio Project.jpeg" alt="ME 351 Arduino step counter project">
-                        </div>
-                    </article>
+                    <a class="project-tile reveal" href="project-arduino.html">
+                        <img src="images/Arduino Uno.jpg" alt="Arduino Uno project cover image">
+                        <span class="project-tile-overlay">
+                            <span class="project-tile-title">ME 351 Arduino Step Counter</span>
+                            <span class="project-tile-classification">School Project</span>
+                        </span>
+                    </a>
 
-                    <article class="project-case reveal">
-                        <div class="project-case-header">
-                            <span class="project-index">04</span>
-                            <h2>EGR 248 Midterm Project</h2>
-                        </div>
-                        <div class="project-description">
-                            Interactive CAD viewer for the EGR 248 midterm assembly model.
-                        </div>
-                        <div
-                            class="viewer-shell"
-                            data-viewer
-                            data-model="models/EGR%20248%20Midterm.gltf"
-                            data-title="EGR 248 Midterm Project"
-                            data-description="Interactive 3D view for your EGR 248 midterm export."
-                            data-placeholder="Loading the EGR 248 model. Use controls below to inspect the assembly."
-                        >
-                            <div class="viewer-canvas"></div>
-                            <div class="viewer-toolbar">
-                                <button type="button" class="control-btn" data-action="reset">Reset View</button>
-                                <button type="button" class="control-btn" data-action="grid">Grid</button>
-                                <button type="button" class="control-btn" data-action="axes">Axes</button>
-                            </div>
-                            <div class="viewer-meta">
-                                <h4>EGR 248 Midterm Project</h4>
-                                <p>Use mouse drag to rotate, scroll to zoom, and right-click drag to pan.</p>
-                                <p class="viewer-status">Status: Initializing viewer...</p>
-                            </div>
-                        </div>
-                    </article>
+                    <a class="project-tile reveal" href="project-miscellaneous.html">
+                        <img src="images/mechanical-design.png" alt="Engineering project collage cover image">
+                        <span class="project-tile-overlay">
+                            <span class="project-tile-title">Miscellaneous Projects</span>
+                            <span class="project-tile-classification">School and Personal Projects</span>
+                        </span>
+                    </a>
+
                 </div>
             </section>
         </main>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/controls/OrbitControls.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/three@0.134.0/examples/js/loaders/GLTFLoader.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
+
